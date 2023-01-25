@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreateOutOfBounds : MonoBehaviour
+public class DestroyOutOfBounds : MonoBehaviour
 {
     private float topBound = 30;
     private float lowerBound = -10;
@@ -20,6 +20,7 @@ public class CreateOutOfBounds : MonoBehaviour
             Destroy(gameObject);
         } else if (transform.position.z < lowerBound)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
     }
